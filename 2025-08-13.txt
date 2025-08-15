@@ -64,3 +64,30 @@ electricCar.move() 를 호출하면 먼저 x001 참조로 이동한다. 내부�
 부모 타입의 기능을 자식에서는 다르게 재정의 하고 싶을 수 있다. 예를 들어서 자동차의 경우 Car.move() 라는 기능이 있다. 이 기능을 사용하면 단순히 "차를 이동합니다."라고 출력한다. 전기차의 경우 보통 더 빠르기 때문에 전기차가 move() 를 호출한 경우에는 "전기차를 빠르게 이동합니다."라고 출력을 변경하고 싶다.
 
 이렇게 부모에게서 상속 받은 기능을 자식이 재정의 하는 것을 메서드 오버라이딩(Overriding)이라 한다.
+
+Car
+
+public class Car {
+	
+    public void move() {
+ 		System.out.println("차를 이동합니다.");
+    }
+    
+    public void openDoor() {
+ 		System.out.println("문을 엽니다.");
+    }
+}
+ElectricCar
+
+public class ElectricCar extends Car {
+
+    @Override
+ 	public void move() {
+ 		System.out.println("전기차를 빠르게 이동합니다.");
+    }
+    
+ 	public void charge() {
+ 		System.out.println("충전합니다.");
+    }
+}
+ElectricCar 는 부모인 Car의 move() 기능을 그대로 사용하고 싶지 않다. 메서드 이름은 같지만 새로운 기능을 사용하고 싶다. 그래서 ElectricCar의 move() 메서드를 새로 만들었다. 이렇게 부모의 기능을 자식이 새로 재정의하는 것을 메서드 오버라이딩이라 한다. 이제 ElectricCar의 move()를 호출하면 Car 의 move() 가 아니라 ElectricCar 의 move() 가 호출된다.
