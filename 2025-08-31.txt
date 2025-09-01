@@ -9,3 +9,5 @@ git merge 브랜치명
 git rebase 브랜치명
 
 merge랑 rebase차이를 좀 자세히 공부하기
+
+https://kghworks.tistory.com/133
