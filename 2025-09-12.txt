@@ -1,0 +1,15 @@
+git commit
+
+git branch 브랜치명
+
+git checkout 브랜치명
+
+git merge 브랜치명
+
+git rebase 브랜치명
+
+merge랑 rebase차이를 좀 자세히 공부하기
+
+https://wormwlrm.github.io/2020/09/03/Git-rebase-with-interactive-option.html
+
+interractive?
